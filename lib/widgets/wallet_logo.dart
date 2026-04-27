@@ -54,7 +54,7 @@ class WalletLogo extends StatelessWidget {
             // The letter glyph
             Text(
               w.logoGlyph,
-              style: GoogleFonts.geist (
+              style: GoogleFonts.inter (
                 color: Colors.white,
                 fontSize: letterSize,
                 fontWeight: FontWeight.w700,

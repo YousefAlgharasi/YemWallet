@@ -43,7 +43,7 @@ class WelcomeScreen extends StatelessWidget {
                       const SizedBox(width: 10),
                       Text(
                         'YemenPay',
-                        style: GoogleFonts.geist(
+                        style: GoogleFonts.inter(
                           fontSize: 18,
                           fontWeight: FontWeight.w700,
                           color: pal.text1,
@@ -161,13 +161,13 @@ class _WalletStack extends StatelessWidget {
           ),
 
           // Back card — One Cash USD (purple)
-          _WalletCard(
+          const _WalletCard(
             top: 80 + 60,
             rotationDeg: -10,
             label: 'ONE CASH',
             ccy: 'USD',
             amount: '\$100.00',
-            gradient: const LinearGradient(
+            gradient: LinearGradient(
               colors: [Color(0xFFB39DFF), Color(0xFF8A6FFF)],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
@@ -175,13 +175,13 @@ class _WalletStack extends StatelessWidget {
           ),
 
           // Middle card — Alkuraimi SAR (blue)
-          _WalletCard(
+          const _WalletCard(
             top: 80,
             rotationDeg: -2,
             label: 'ALKURAIMI',
             ccy: 'SAR',
             amount: '500 ر.س',
-            gradient: const LinearGradient(
+            gradient: LinearGradient(
               colors: [Color(0xFF4D8AFF), Color(0xFF2D5FDF)],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
@@ -189,13 +189,13 @@ class _WalletStack extends StatelessWidget {
           ),
 
           // Front card — Jaib YER (orange)
-          _WalletCard(
+          const _WalletCard(
             top: 80 - 50,
             rotationDeg: 8,
             label: 'JAIB',
             ccy: 'YER',
             amount: '80,000 ر.ي',
-            gradient: const LinearGradient(
+            gradient: LinearGradient(
               colors: [Color(0xFFFF7A45), Color(0xFFD4501A)],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
@@ -256,7 +256,7 @@ class _WalletCard extends StatelessWidget {
                 children: [
                   Text(
                     label,
-                    style: GoogleFonts.geist(
+                    style: GoogleFonts.inter(
                       fontSize: 13,
                       fontWeight: FontWeight.w600,
                       color: Colors.white.withOpacity(0.85),
@@ -271,7 +271,7 @@ class _WalletCard extends StatelessWidget {
                     ),
                     child: Text(
                       ccy,
-                      style: GoogleFonts.geist(
+                      style: GoogleFonts.inter(
                         fontSize: 11,
                         fontWeight: FontWeight.w700,
                         color: Colors.white,

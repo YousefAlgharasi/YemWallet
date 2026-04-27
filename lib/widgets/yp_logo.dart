@@ -24,7 +24,7 @@ class YpLogo extends StatelessWidget {
       ),
       child: Text(
         'Y',
-        style: GoogleFonts.geist(
+        style: GoogleFonts.inter(
           fontSize: letterSize,
           fontWeight: FontWeight.w800,
           color: const Color(0xFF0A0A0A),

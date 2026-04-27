@@ -150,7 +150,7 @@ extension AppThemeX on BuildContext {
 TextTheme _buildTextTheme(AppPalette palette, AppLang lang) {
   final base = lang == AppLang.ar
       ? GoogleFonts.ibmPlexSansArabicTextTheme()
-      : GoogleFonts.geistTextTheme();
+      : GoogleFonts.interTextTheme();
   return base.apply(
     bodyColor: palette.text1,
     displayColor: palette.text1,
@@ -200,7 +200,7 @@ TextStyle monoStyle({
   Color? color,
   double? letterSpacing,
 }) {
-  return GoogleFonts.geistMono(
+  return GoogleFonts.jetBrainsMono(
     fontSize: fontSize,
     fontWeight: fontWeight,
     color: color,
@@ -226,7 +226,7 @@ TextStyle sansStyle(
       height: height,
     );
   }
-  return GoogleFonts.geist(
+  return GoogleFonts.inter(
     fontSize: fontSize,
     fontWeight: fontWeight,
     color: color,

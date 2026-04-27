@@ -22,7 +22,7 @@ double convertCcy(double amount, DisplayCurrency from, DisplayCurrency to) {
 String fmtMoney(double amount, DisplayCurrency currency, AppLang lang) {
   final locale = lang == AppLang.ar ? 'ar' : 'en_US';
   final maxDigits = currency == DisplayCurrency.yer ? 0 : 2;
-  final minDigits = 0;
+  const minDigits = 0;
   final fmt = NumberFormat.decimalPattern(locale)
     ..maximumFractionDigits = maxDigits
     ..minimumFractionDigits = minDigits;

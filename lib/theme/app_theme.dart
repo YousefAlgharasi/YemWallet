@@ -206,6 +206,7 @@ TextStyle monoStyle({
     color: color,
     letterSpacing: letterSpacing ?? -0.02 * (fontSize ?? 14),
     fontFeatures: const [FontFeature.tabularFigures()],
+    decoration: TextDecoration.none,
   );
 }
 
@@ -224,6 +225,7 @@ TextStyle sansStyle(
       fontWeight: fontWeight,
       color: color,
       height: height,
+      decoration: TextDecoration.none,
     );
   }
   return GoogleFonts.inter(
@@ -232,5 +234,6 @@ TextStyle sansStyle(
     color: color,
     letterSpacing: letterSpacing ?? -0.01 * (fontSize ?? 14),
     height: height,
+    decoration: TextDecoration.none,
   );
 }

@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:019dca18-9c43-7917-8ed7-db00aec97af1.claudeusercontent.com)",
+      "Bash(flutter analyze *)",
+      "Bash(flutter devices *)",
+      "Bash(flutter run *)",
+      "Bash(flutter --version)",
+      "Bash(flutter build *)",
+      "Bash(python -m http.server 8080)",
+      "Bash(start msedge *)",
+      "Bash(powershell *)"
+    ]
+  }
+}

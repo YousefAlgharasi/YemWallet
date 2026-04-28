@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 
 import 'state/app_settings.dart';
 import 'theme/app_theme.dart';
-import 'screens/home_shell.dart';
+import 'screens/app_router.dart';
 
 void main() {
   runApp(
@@ -30,14 +30,23 @@ class YemenPayApp extends StatelessWidget {
           ? ThemeMode.dark
           : ThemeMode.light,
       builder: (context, child) {
+        final pal = Theme.of(context).extension<AppPalette>()!;
         return Directionality(
           textDirection: settings.lang == AppLang.ar
               ? TextDirection.rtl
               : TextDirection.ltr,
-          child: child ?? const SizedBox.shrink(),
+          child: ColoredBox(
+            color: pal.bg0,
+            child: Center(
+              child: ConstrainedBox(
+                constraints: const BoxConstraints(maxWidth: 430),
+                child: child ?? const SizedBox.shrink(),
+              ),
+            ),
+          ),
         );
       },
-      home: const HomeShell(),
+      home: const AppRouter(),
     );
   }
 }

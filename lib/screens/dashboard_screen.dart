@@ -24,11 +24,13 @@ import '../widgets/yp_tab_bar.dart';
 class DashboardScreen extends StatelessWidget {
   final ValueChanged<String>? onAction;
   final DashboardLayout? layoutOverride;
+  final bool showTabBar;
 
   const DashboardScreen({
     super.key,
     this.onAction,
     this.layoutOverride,
+    this.showTabBar = true,
   });
 
   @override
@@ -230,12 +232,12 @@ class DashboardScreen extends StatelessWidget {
             ),
           ),
 
-          // Tab bar
-          YpTabBar(
-            active: YpTab.home,
-            onTap: (t) => onAction?.call(t.name),
-            onSplitTap: fire('split'),
-          ),
+          if (showTabBar)
+            YpTabBar(
+              active: YpTab.home,
+              onTap: (t) => onAction?.call(t.name),
+              onSplitTap: fire('split'),
+            ),
         ],
       ),
     );
